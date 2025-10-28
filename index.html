@@ -160,6 +160,14 @@
             font-size: 0.85rem;
             margin-top: 15px;
             border: 1px solid rgba(138, 127, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .vrchat-badge:hover {
+            background: rgba(101, 75, 226, 0.25);
+            box-shadow: 0 0 10px rgba(138, 127, 255, 0.3);
+            transform: translateY(-2px);
         }
         
         /* 动画效果 */
@@ -226,14 +234,18 @@
         </main>
         
         <footer>
-            <p>Designed for my VRChat friends.--@WntSnwf</p>
-            <div class="vrchat-badge">VRChat Friendly</div>
+            <p>Designed for my VRChat friends.--@Wnt.Snwf.</p>
+            <div class="vrchat-badge" onclick="showBioMessage()">About Bio</div>
         </footer>
     </div>
     
     <script>
         function showSocialMedia() {
             alert("QQ: 2078029993 \n(This is an inactive account. I will tell you the active account when you are trusted.) \nWeChat: Secret \nYoutube: Null \nTwitter: Null \nGithub: kongshanElee");
+        }
+        
+        function showBioMessage() {
+            alert("The translation of the Chinese poem in my Bio is:\n\nWinter's crystal,\nLightly perches on ink-brushed skies.\nIn empty mountains, silent temple—\nHearing rain burn leaves,\nSimmering time.\n\nSnow falls soundless—\nThe world's whisper, its cleansing sigh;\nInk-stained balladsCast through stardust—freedom's eternal melancholy.\n\nWhy seek understanding?\nLet unfettered winds swell my sleeves—\nWith moonlit clouds,\nListening to tidal verse,\nWaiting tides return on celestial hours.");
         }
     </script>
 
