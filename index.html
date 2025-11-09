@@ -145,10 +145,12 @@
             font-size: 1.8rem;
         }
         
-        footer {
+        .footer {
             margin-top: 40px;
-            color: rgba(230, 230, 255, 0.6);
+            color: rgba(252, 253, 210, 0.971);
+            background: rgba(30, 30, 54, 0.6);
             font-size: 0.9rem;
+            cursor:pointer;
         }
         
         .vrchat-badge {
@@ -234,7 +236,7 @@
         </main>
         
         <footer>
-            <p>Designed for my VRChat friends.--@Wnt.Snwf.</p>
+            <div class="footer" onclick="showEgg()">Designed for my VRChat friends.--@Wnt.Snwf.</div>
             <div class="vrchat-badge" onclick="showBioMessage()">About Bio</div>
         </footer>
     </div>
@@ -246,6 +248,10 @@
         
         function showBioMessage() {
             alert("The translation of the Chinese poem in my Bio is:\n\nWinter's crystal,\nLightly perches on ink-brushed skies.\nIn empty mountains, silent temple—\nHearing rain burn leaves,\nSimmering time.\n\nSnow falls soundless—\nThe world's whisper, its cleansing sigh;\nInk-stained balladsCast through stardust—freedom's eternal melancholy.\n\nWhy seek understanding?\nLet unfettered winds swell my sleeves—\nWith moonlit clouds,\nListening to tidal verse,\nWaiting tides return on celestial hours.");
+        }
+
+        function showEgg(){
+            alert("Congratulations on finding the Egg! What a wonderful and special discovery — it's no small thing, and I hope it brings a smile to your face.\n\nYou know, everyone goes through difficult times. When things feel heavy, try to gently let go of what's weighing you down. Do something you truly enjoy — whether it's listening to music, hearing the sound of rain, or anything that brings you peace. Everything will be fine.\n\nRemember, be kind to yourself. Bright days are ahead.\n\nLove from China.")
         }
     </script>
 
