@@ -68,6 +68,8 @@
             font-size: 1.2rem;
             opacity: 0.85;
             margin-top: 10px;
+            color: rgba(200,230,255,1);
+            cursor: pointer;
         }
         
         .contact-card {
@@ -208,7 +210,7 @@
     <div class="container floating">
         <header>
             <h1>Contact Information</h1>
-            <p class="subtitle">Feel free to reach out for communication</p>
+            <div class="subtitle" onclick="showEgg2()">Feel free to reach out for communication</div>
         </header>
         
         <main>
@@ -236,7 +238,7 @@
         </main>
         
         <footer>
-            <div class="footer" onclick="showEgg()">Designed for my VRChat friends.--@Wnt.Snwf.</div>
+            <div class="footer" onclick="showEgg1()">Designed for my VRChat friends.--@Wnt.Snwf.</div>
             <div class="vrchat-badge" onclick="showBioMessage()">About Bio</div>
         </footer>
     </div>
@@ -250,8 +252,12 @@
             alert("The translation of the Chinese poem in my Bio is:\n\nWinter's crystal,\nLightly perches on ink-brushed skies.\nIn empty mountains, silent temple—\nHearing rain burn leaves,\nSimmering time.\n\nSnow falls soundless—\nThe world's whisper, its cleansing sigh;\nInk-stained balladsCast through stardust—freedom's eternal melancholy.\n\nWhy seek understanding?\nLet unfettered winds swell my sleeves—\nWith moonlit clouds,\nListening to tidal verse,\nWaiting tides return on celestial hours.");
         }
 
-        function showEgg(){
+        function showEgg1(){
             alert("Congratulations on finding the Egg! What a wonderful and special discovery — it's no small thing, and I hope it brings a smile to your face.\n\nYou know, everyone goes through difficult times. When things feel heavy, try to gently let go of what's weighing you down. Do something you truly enjoy — whether it's listening to music, hearing the sound of rain, or anything that brings you peace. Everything will be fine.\n\nRemember, be kind to yourself. Bright days are ahead.\n\nLove from China.")
+        }
+
+        function showEgg2(){
+            alert("Don't feel sad over my death.\nJust as winter's crystal is fragile,\nthere's a time for every snowflake to melt.\nIf you can remember there has been a snowflake in your life,\nthat is enough.\n\n不必为我的逝去哀戚。\n若说冬日晶莹易碎，\n须知每片雪花终将消融。\n只要记得生命中曾有片雪花停留，\n便已足够。")
         }
     </script>
 
