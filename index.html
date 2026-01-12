@@ -40,6 +40,7 @@
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 20px;
+            cursor: pointer;
         }
         
         header::after {
@@ -133,6 +134,7 @@
             border-radius: 8px;
             border: 1px solid rgba(138, 127, 255, 0.2);
             background: rgba(138, 127, 255, 0.08);
+            cursor: pointer;
         }
         
         .social-link:hover {
@@ -209,7 +211,7 @@
 <body>
     <div class="container floating">
         <header>
-            <h1>Contact Information</h1>
+            <h1 onclick="showEgg3()">Contact Information</h1>
             <div class="subtitle" onclick="showEgg2()">Feel free to reach out for communication</div>
         </header>
         
@@ -239,7 +241,8 @@
         
         <footer>
             <div class="footer" onclick="showEgg1()">Designed for my VRChat friends.--@Wnt.Snwf.</div>
-            <div class="vrchat-badge" onclick="showBioMessage()">About Bio</div>
+            <div class="vrchat-badge" onclick="showBioMessage()">Original Bio</div>
+            <div class="vrchat-badge" onclick="showTranslation()">Translation</div>
         </footer>
     </div>
     
@@ -248,8 +251,8 @@
             alert("QQ: 2078029993 \n(This is an inactive account. I will tell you the active account when you are trusted.) \nWeChat: Secret \nYoutube: Null \nTwitter: Null \nGithub: kongshanElee");
         }
         
-        function showBioMessage() {
-            alert("The translation of the Chinese poem in my Bio is:\n\nWinter's crystal,\nLightly perches on ink-brushed skies.\nIn empty mountains, silent temple—\nHearing rain burn leaves,\nSimmering time.\n\nSnow falls soundless—\nThe world's whisper, its cleansing sigh;\nInk-stained balladsCast through stardust—freedom's eternal melancholy.\n\nWhy seek understanding?\nLet unfettered winds swell my sleeves—\nWith moonlit clouds,\nListening to tidal verse,\nWaiting tides return on celestial hours.");
+        function showTranslation() {
+            alert("The translation of the Chinese poem in the Original Bio is:\n\nWinter's crystal,\nLightly perches on ink-brushed skies.\nIn empty mountains, silent temple—\nHearing rain burn leaves,\nSimmering time.\n\nSnow falls soundless—\nThe world's whisper, its cleansing sigh;\nInk-stained balladsCast through stardust—freedom's eternal melancholy.\n\nWhy seek understanding?\nLet unfettered winds swell my sleeves—\nWith moonlit clouds,\nListening to tidal verse,\nWaiting tides return on celestial hours.");
         }
 
         function showEgg1(){
@@ -257,7 +260,15 @@
         }
 
         function showEgg2(){
-            alert("Don't feel sad over my death.\nJust as winter's crystal is fragile,\nthere's a time for every snowflake to melt.\nIf you can remember there has been a snowflake in your life,\nthat is enough.\n\n不必为我的逝去哀戚。\n若说冬日晶莹易碎，\n须知每片雪花终将消融。\n只要记得生命中曾有片雪花停留，\n便已足够。")
+            alert("This is an Easter Egg.\n\nDon't feel sad over my death.\nJust as winter's crystal is fragile,\nthere's a time for every snowflake to melt.\nIf you can remember there has been a snowflake in your life,\nthat is enough.\n\n不必为我的逝去哀戚。\n若说冬日晶莹易碎，\n须知每片雪花终将消融。\n只要记得生命中曾有片雪花停留，\n便已足够。")
+        }
+
+        function showEgg3(){
+            alert("I recommend you not to read this.\nIt's all negative things. I don't want to let you down or feel confused.\n.\n.\n.\nWell, actually, this is an Easter Egg, but, almost all the texts in this website can be clicked. So I don't know what the meaning of hinding 3 eggs there. Never mind.\nI AM NOT the person who is happy everyday and everywhere, I AM the ice that is fragile, cold, or something.\nI said, I sometimes feel down for no reason, so  IF THAT BOTHER YOU, I'M SORRY.\nBut I have my bad life experiences, actually most people has, so WHAT I NEED IS COMPANY AND UNDERSTANDING.\nIn fact I don't know, or don't care what am I saying.\nBut, if you are reading this...\nTHANK YOU.")
+        }
+
+        function showBioMessage(){
+            alert("I'm reading your bio too （ ＾ v ＾ ）.\nI'm Chinese. You can call me Snow or Yuki.\nSometimes I may feel depressed for no reason.\nI like listening people's conversation （and talking with them）.\nIf you are curious about the translation of the Chinese poem below, you can click 'Translation'.\n\nCN: native | EN: CEFR B1 | JP: beginner\n\n中国人です。私の日本語はあまり上手ではなく、少ししか話せません。\n\n冬之晶，轻栖于墨吻过的苍穹。于空山寂寺，听雨焚叶，烹煮时光。\n雪落无声，是世界的低语与净化；墨染长歌，寄星河以自由的忧愁。\n何须人懂？且任逍遥风满袖，伴云月，听汐语，待潮信归时。")
         }
     </script>
 
