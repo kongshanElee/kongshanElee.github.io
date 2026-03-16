@@ -34,9 +34,8 @@
         .container {
             max-width: 800px;
             width: 100%;
-            background-color: rgba(10, 24, 29, 0.78);   /* 寂夜凝霜，半透明磨砂 */
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background-color: rgba(10, 24, 29, 0.12);   /* 寂夜凝霜，半透明磨砂 */
+            backdrop-filter: blur(1px);
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 16px 36px rgba(0, 10, 18, 0.6), 0 0 0 1px rgba(155, 210, 240, 0.1) inset;
@@ -290,9 +289,51 @@
             background: rgba(140, 220, 255, 0.25);
             color: #f0ffff;
         }
+
+        /* 背景文字层 */
+        .background-text {
+            position: fixed;        /* 固定定位，覆盖整个视口 */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;            /* 置于所有内容之下 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: clamp(1.2rem, 5vw, 2.5rem); /* 响应式字号 */
+            font-weight: 300;
+            color: rgba(200, 230, 255, 0.15);      /* 极淡的冰蓝色，透明度低 */
+            white-space: pre-line;   /* 保留换行（配合<br>） */
+            line-height: 1.5;
+            pointer-events: none;    /* 鼠标事件穿透，不影响点击下方元素 */
+            user-select: none;       /* 防止文字被选中 */
+            font-family: 'Segoe UI', 'Noto Sans', 'Microsoft YaHei', sans-serif;
+            text-shadow: 0 0 10px rgba(100, 200, 255, 0.2); /* 轻微发光，融入背景 */
+            letter-spacing: 2px;
+            transform: rotate(-5deg); /* 轻微倾斜，更自然 */
+        }
+
+        /* 可选：针对小屏幕调整字号或旋转 */
+        @media (max-width: 600px) {
+            .background-text {
+                transform: rotate(-3deg);
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
+
 <body>
+    <div class="background-text">
+        命に嫌われている。<br>
+        他人が生きていてもどうでもよくて、<br>
+        でも、やっぱり君には生きて欲しい<br>
+        そう、今これを読んでいる「君」に<br>
+        生きて、私のためにでも
+    </div>
+
     <div class="container floating">
         <header>
             <h1 onclick="showEgg3()">Contact Information</h1>
