@@ -10,8 +10,6 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-
         body {
             font-family: 'Segoe UI', 'Noto Sans', Tahoma, Geneva, Verdana, sans-serif;
             background: 
@@ -29,8 +27,6 @@
             padding: 20px;
             line-height: 1.6;
         }
-
-
         .container {
             max-width: 800px;
             width: 100%;
@@ -43,21 +39,15 @@
             text-align: center;
             transition: box-shadow 0.4s ease;
         }
-
-
         .container:hover {
             box-shadow: 0 20px 44px rgba(70, 180, 220, 0.15), 0 0 0 1px rgba(150, 220, 255, 0.2) inset;
         }
-
-
         header {
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 20px;
             cursor: pointer;
         }
-
-
         header::after {
             content: '';
             position: absolute;
@@ -70,8 +60,6 @@
             border-radius: 4px;
             box-shadow: 0 0 10px #8ad1ff70;
         }
-
-
         h1 {
             font-size: 2.8rem;
             font-weight: 700;
@@ -82,8 +70,6 @@
             letter-spacing: 1.5px;
             text-shadow: 0 0 12px rgba(150, 220, 255, 0.3);
         }
-
-
         .subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
@@ -94,13 +80,9 @@
             transition: color 0.2s;
             cursor: pointer;
         }
-
-
         .subtitle:hover {
             color: #e2f0ff;
         }
-
-
         .contact-card {
             background: rgba(16, 32, 38, 0.65);
             border-radius: 18px;
@@ -110,20 +92,14 @@
             border: 1px solid rgba(100, 190, 230, 0.16);
             backdrop-filter: blur(4px);
         }
-
-
         .contact-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 30px rgba(70, 180, 210, 0.2);
             border-color: rgba(110, 210, 255, 0.3);
         }
-
-
         .links-section {
             margin-top: 28px;
         }
-
-
         .section-title {
             font-size: 1.25rem;
             color: #bedaf0;
@@ -135,8 +111,6 @@
             opacity: 0.9;
             cursor: pointer;
         }
-
-
         .email-link {
             display: inline-flex;
             align-items: center;
@@ -151,8 +125,6 @@
             border: 1px solid rgba(130, 215, 255, 0.2);
             text-shadow: 0 0 6px #b0e6ff;
         }
-
-
         .email-link:hover {
             color: #ffffff;
             background: rgba(130, 220, 255, 0.12);
@@ -160,16 +132,12 @@
             text-shadow: 0 0 16px #c0edff, 0 0 30px #6fcfff;
             box-shadow: 0 0 24px rgba(100, 210, 255, 0.2);
         }
-
-
         .social-links {
             display: flex;
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
         }
-
-
         .social-link {
             display: flex;
             align-items: center;
@@ -185,8 +153,6 @@
             backdrop-filter: blur(4px);
             letter-spacing: 1.5px;
         }
-
-
         .social-link:hover {
             color: #f0fcff;
             background: rgba(100, 200, 255, 0.15);
@@ -194,15 +160,11 @@
             box-shadow: 0 0 22px rgba(110, 210, 255, 0.25);
             transform: translateY(-4px);
         }
-
-
         .icon {
             margin-right: 12px;
             font-size: 1.8rem;
             opacity: 0.8;
         }
-
-
         .footer {
             margin-top: 40px;
             color: #cde1ec;
@@ -213,15 +175,11 @@
             backdrop-filter: blur(4px);
             transition: all 0.2s;
         }
-
-
         .footer:hover {
             background: rgba(24, 48, 56, 0.7);
             color: #ecf9ff;
             border-color: rgba(140, 225, 255, 0.3);
         }
-
-
         .vrchat-badge {
             display: inline-block;
             background: rgba(70, 170, 220, 0.1);
@@ -234,9 +192,8 @@
             cursor: pointer;
             transition: all 0.25s ease;
             backdrop-filter: blur(2px);
+            text-decoration: none;
         }
-
-
         .vrchat-badge:hover {
             background: rgba(80, 190, 250, 0.18);
             box-shadow: 0 0 18px rgba(80, 200, 255, 0.25);
@@ -244,19 +201,13 @@
             color: white;
             border-color: rgba(160, 235, 255, 0.6);
         }
-
-
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
         }
-
-
         .floating {
             animation: float 7s ease-in-out infinite;
         }
-
-
         /* 响应式 温柔收缩 */
         @media (max-width: 600px) {
             .container {
@@ -277,8 +228,6 @@
                 font-size: 1.5rem;
             }
         }
-
-
         /* 自定义文本选中色 */
         ::selection {
             background: rgba(140, 220, 255, 0.25);
@@ -289,7 +238,6 @@
             background: rgba(140, 220, 255, 0.25);
             color: #f0ffff;
         }
-
         /* 背景文字层 */
         .background-text {
             position: fixed;        /* 固定定位，覆盖整个视口 */
@@ -314,7 +262,6 @@
             letter-spacing: 2px;
             transform: rotate(-5deg); /* 轻微倾斜，更自然 */
         }
-
         /* 针对小屏幕调整字号或旋转 */
         @media (max-width: 600px) {
             .background-text {
@@ -324,7 +271,6 @@
         }
     </style>
 </head>
-
 <body>
     <div class="background-text">
         命に嫌われている。<br>
@@ -333,21 +279,16 @@
         そう、今これを読んでいる「君」に<br>
         生きて、私のためにでも
     </div>
-
     <div class="container floating">
         <header>
             <h1 onclick="showEgg3()">Contact Information</h1>
             <div class="subtitle" onclick="showEgg2()">Feel free to reach out for communication</div>
         </header>
-
-
         <main>
             <div class="contact-card">
                 <a href="mailto:Fuyu_Yume@outlook.com" class="email-link">
                     Click here to Email me
                 </a>
-
-
                 <div class="links-section">
                     <span class="section-title" onclick="showEgg4()">Other Platforms</span>
                     <div class="social-links">
@@ -357,8 +298,6 @@
                         <a href="https://steamcommunity.com/id/WntSnwf" target="_blank" class="social-link">
                             Steam
                         </a>
-
-
                         <a class="social-link" onclick="showSocialMedia()">
                             SocialMedia
                         </a>
@@ -366,51 +305,28 @@
                 </div>
             </div>
         </main>
-
-
         <footer>
             <div class="footer" onclick="showEgg1()">Designed for my VRChat friends.--@Wnt.Snwf.</div>
-            <div class="vrchat-badge" onclick="showBioMessage()">Original Bio</div>
-            <div class="vrchat-badge" onclick="showTranslation()">Translation</div>
+            <!-- 替换原Original Bio/Translation，新增咖啡居世界链接 -->
+            <a href="https://vrchat.com/home/world/wrld_a5b04cb4-27b3-49d5-9dbc-5ce3099aa235/info" target="_blank" class="vrchat-badge">Goodnight Café</a>
         </footer>
     </div>
-
-
     <script>
         function showSocialMedia() {
             alert("QQ: 2078029993 \n(This is an inactive account. I will tell you the active account when you are trusted.) \nWeChat: Secret \nYoutube: Null \nTwitter: Null \nGithub: kongshanElee");
         }
-
-
-        function showTranslation() {
-            alert("The translation of the Chinese poem in the Original Bio is:\n\nWinter's crystal,\nLightly perches on ink-brushed skies.\nIn empty mountains, silent temple—\nHearing rain burn leaves,\nSimmering time.\n\nSnow falls soundless—\nThe world's whisper, its cleansing sigh;\nInk-stained balladsCast through stardust—freedom's eternal melancholy.\n\nWhy seek understanding?\nLet unfettered winds swell my sleeves—\nWith moonlit clouds,\nListening to tidal verse,\nWaiting tides return on celestial hours.");
-        }
-
-
         function showEgg1(){
             alert("Congratulations on finding the Egg! What a wonderful and special discovery — it's no small thing, and I hope it brings a smile to your face.\n\nYou know, everyone goes through difficult times. When things feel heavy, try to gently let go of what's weighing you down. Do something you truly enjoy — whether it's listening to music, hearing the sound of rain, or anything that brings you peace. Everything will be fine.\n\nRemember, be kind to yourself. Bright days are ahead.\n\nLove from China.")
         }
-
-
         function showEgg2(){
             alert("This is an Easter Egg.\n\n---\n\nDon't feel sad over my death.\nJust as winter's crystal is fragile,\nthere's a time for every snowflake to melt.\nIf you can remember there has been a snowflake in your life,\nthat is enough.\n\n不必为我的逝去哀戚。\n若说冬日晶莹易碎，\n须知每片雪花终将消融。\n只要记得生命中曾有片雪花停留，\n便已足够。")
         }
-
-
         function showEgg3(){
             alert("This is an Easter Egg.\n\n---\n\nYou know, no one in the world can completely understand you.\nNot your friends, not your parents, not even yourself.\nBut there must be someone willing to try to understand and accept you.\nIf you don't have that person yet, let me be that person.\nLet me understand you, accept you, save you —\nbecause that is exactly what no one has ever done for me.\n.\n.\n.\nAlthough I am the person who needs that most.")
         }
-
-
-        function showBioMessage(){
-            alert("I'm reading your bio too （ ＾ v ＾ ）.\nI'm Chinese. You can call me Snow or Yuki.\nSometimes I may feel depressed for no reason.\nI like listening people's conversation （and talking with them）.\nIf you are curious about the translation of the Chinese poem below, you can click 'Translation'.\n\nCN: native | EN: CEFR B1 | JP: beginner\n\n中国人です。私の日本語はあまり上手ではなく、少ししか話せません。\n\n冬之晶，轻栖于墨吻过的苍穹。于空山寂寺，听雨焚叶，烹煮时光。\n雪落无声，是世界的低语与净化；墨染长歌，寄星河以自由的忧愁。\n何须人懂？且任逍遥风满袖，伴云月，听汐语，待潮信归时。")
-        }
-
         function showEgg4(){
             alert("This is an Easter Egg.\n\n---\n\nLife is full of luck.\nHow far you rise,\n depends on how kindly it treats you.\nIt's ridiculous, but true.\nSo, since everything is already written into destiny, what's the meaning of living in a ridiculous world, doing ridiculous things that you may not wanna do, and ridiculously preventing people from dying?\n\nMaybe it's just because of that tiny, almost invisible hope.\n\n---\n\nReply to Kamitora's VRChat bio, and figure out why I want to prevent those whom I met and got along with from dying.")
         }
     </script>
-
-
 </body>
 </html>
