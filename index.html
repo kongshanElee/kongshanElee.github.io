@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact Information | VRChat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anti-Utopia System | Wnt. Snwf.</title>
     <style>
         * {
             margin: 0;
@@ -11,321 +11,567 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', 'Noto Sans', Tahoma, Geneva, Verdana, sans-serif;
-            background: 
-                radial-gradient(circle at 15% 30%, rgba(210, 235, 255, 0.06) 1px, transparent 1px),
-                radial-gradient(circle at 75% 65%, rgba(190, 225, 255, 0.05) 1px, transparent 1px),
-                radial-gradient(circle at 40% 80%, rgba(200, 240, 255, 0.04) 1px, transparent 1px),
-                linear-gradient(145deg, #0c1e28 0%, #0a1a22 100%);
-            background-size: 70px 70px, 90px 90px, 110px 110px, 100% 100%;
-            background-position: 0 0, 20px 30px, 10px 60px, 0 0;
-            color: #e0ecf2;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            background-color: #05070a;
+            color: #b0e6ff;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 16px;
             line-height: 1.6;
-        }
-        .container {
-            max-width: 800px;
-            width: 100%;
-            background-color: rgba(10, 24, 29, 0.12);
-            backdrop-filter: blur(1px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 16px 36px rgba(0, 10, 18, 0.6), 0 0 0 1px rgba(155, 210, 240, 0.1) inset;
-            border: 1px solid rgba(130, 200, 235, 0.18);
-            text-align: center;
-            transition: box-shadow 0.4s ease;
-        }
-        .container:hover {
-            box-shadow: 0 20px 44px rgba(70, 180, 220, 0.15), 0 0 0 1px rgba(150, 220, 255, 0.2) inset;
-        }
-        header {
-            margin-bottom: 30px;
+            overflow: hidden;
+            height: 100vh;
             position: relative;
-            padding-bottom: 20px;
-            cursor: pointer;
         }
-        header::after {
+        /* 扫描线效果 */
+        body::before {
             content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90px;
-            height: 4px;
-            background: linear-gradient(to right, #a0dcff, #c0ebff, #a0dcff);
-            border-radius: 4px;
-            box-shadow: 0 0 10px #8ad1ff70;
-        }
-        h1 {
-            font-size: 2.8rem;
-            font-weight: 700;
-            background: linear-gradient(to right, #ecf9ff, #cae7ff, #e0f2ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
-            letter-spacing: 1.5px;
-            text-shadow: 0 0 12px rgba(150, 220, 255, 0.3);
-        }
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-top: 12px;
-            color: #c9dde9;
-            font-weight: 300;
-            letter-spacing: 1px;
-            transition: color 0.2s;
-            cursor: pointer;
-        }
-        .subtitle:hover {
-            color: #e2f0ff;
-        }
-        .contact-card {
-            background: rgba(16, 32, 38, 0.65);
-            border-radius: 18px;
-            padding: 30px;
-            margin: 30px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
-            border: 1px solid rgba(100, 190, 230, 0.16);
-            backdrop-filter: blur(4px);
-        }
-        .contact-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(70, 180, 210, 0.2);
-            border-color: rgba(110, 210, 255, 0.3);
-        }
-        .links-section {
-            margin-top: 28px;
-        }
-        .section-title {
-            font-size: 1.25rem;
-            color: #bedaf0;
-            margin-bottom: 18px;
-            display: block;
-            font-weight: 400;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            opacity: 0.9;
-            cursor: pointer;
-        }
-        .email-link {
-            display: inline-flex;
-            align-items: center;
-            font-size: 1.9rem;
-            color: #cef0ff;
-            text-decoration: none;
-            font-weight: 450;
-            transition: all 0.3s ease;
-            padding: 12px 26px;
-            border-radius: 50px;
-            background: rgba(140, 210, 250, 0.04);
-            border: 1px solid rgba(130, 215, 255, 0.2);
-            text-shadow: 0 0 6px #b0e6ff;
-        }
-        .email-link:hover {
-            color: #ffffff;
-            background: rgba(130, 220, 255, 0.12);
-            border-color: rgba(160, 235, 255, 0.5);
-            text-shadow: 0 0 16px #c0edff, 0 0 30px #6fcfff;
-            box-shadow: 0 0 24px rgba(100, 210, 255, 0.2);
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        .social-link {
-            display: flex;
-            align-items: center;
-            font-size: 1.35rem;
-            color: #ccedff;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            padding: 12px 22px;
-            border-radius: 40px;
-            border: 1px solid rgba(120, 200, 245, 0.25);
-            background: rgba(90, 190, 240, 0.05);
-            cursor: pointer;
-            backdrop-filter: blur(4px);
-            letter-spacing: 1.5px;
-        }
-        .social-link:hover {
-            color: #f0fcff;
-            background: rgba(100, 200, 255, 0.15);
-            border-color: rgba(150, 230, 255, 0.55);
-            box-shadow: 0 0 22px rgba(110, 210, 255, 0.25);
-            transform: translateY(-4px);
-        }
-        .icon {
-            margin-right: 12px;
-            font-size: 1.8rem;
-            opacity: 0.8;
-        }
-        .footer {
-            margin-top: 40px;
-            color: #cde1ec;
-            font-size: 0.92rem;
-            cursor: pointer;
-            padding: 12px 16px;
-            border-radius: 36px;
-            backdrop-filter: blur(4px);
-            transition: all 0.2s;
-        }
-        .footer:hover {
-            background: rgba(24, 48, 56, 0.7);
-            color: #ecf9ff;
-            border-color: rgba(140, 225, 255, 0.3);
-        }
-        .vrchat-badge {
-            display: inline-block;
-            background: rgba(70, 170, 220, 0.1);
-            color: #d0ecff;
-            padding: 6px 16px;
-            border-radius: 40px;
-            font-size: 0.88rem;
-            margin: 12px 6px 4px;
-            border: 1px solid rgba(90, 200, 250, 0.25);
-            cursor: pointer;
-            transition: all 0.25s ease;
-            backdrop-filter: blur(2px);
-            text-decoration: none;
-        }
-        .vrchat-badge:hover {
-            background: rgba(80, 190, 250, 0.18);
-            box-shadow: 0 0 18px rgba(80, 200, 255, 0.25);
-            transform: translateY(-3px);
-            color: white;
-            border-color: rgba(160, 235, 255, 0.6);
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-        .floating {
-            animation: float 7s ease-in-out infinite;
-        }
-        /* 响应式 温柔收缩 */
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px 20px;
-            }
-            h1 {
-                font-size: 2.2rem;
-            }
-            .email-link {
-                font-size: 1.5rem;
-                padding: 10px 20px;
-            }
-            .social-link {
-                font-size: 1.2rem;
-                padding: 10px 16px;
-            }
-            .icon {
-                font-size: 1.5rem;
-            }
-        }
-        /* 自定义文本选中色 */
-        ::selection {
-            background: rgba(140, 220, 255, 0.25);
-            color: #f0ffff;
-            text-shadow: 0 0 8px #00e0ff;
-        }
-        ::-moz-selection {
-            background: rgba(140, 220, 255, 0.25);
-            color: #f0ffff;
-        }
-        /* 背景文字层 */
-        .background-text {
-            position: fixed;        /* 固定定位，覆盖整个视口 */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1;            /* 置于所有内容之下 */
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 100;
+            opacity: 0.3;
+        }
+        /* 终端容器 */
+        #terminal {
+            width: 100%;
+            height: 100vh;
+            padding: 30px 40px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #2a3f4f #05070a;
+        }
+        #terminal::-webkit-scrollbar {
+            width: 8px;
+        }
+        #terminal::-webkit-scrollbar-track {
+            background: #05070a;
+        }
+        #terminal::-webkit-scrollbar-thumb {
+            background-color: #2a3f4f;
+            border-radius: 4px;
+        }
+        /* 输出行 */
+        .output-line {
+            margin-bottom: 6px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+        }
+        /* 文字样式 */
+        .system-gray { color: #6c7a89; }
+        .system-cyan { color: #00e5ff; }
+        .user-input { color: #ffffff; }
+        .error { color: #ff5277; }
+        .success { color: #4ade80; }
+        .highlight {
+            color: #f0f9ff;
+            text-shadow: 0 0 8px rgba(0, 229, 255, 0.5);
+        }
+        a {
+            color: #00e5ff;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px rgba(0, 229, 255, 0.8);
+        }
+        /* 输入行 */
+        .input-line {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: clamp(1.2rem, 5vw, 2.5rem); /* 响应式字号 */
-            font-weight: 300;
-            color: rgba(200, 230, 255, 0.15);      /* 极淡的冰蓝色，透明度低 */
-            white-space: pre-line;   /* 保留换行（配合<br>） */
-            line-height: 1.5;
-            pointer-events: none;    /* 鼠标事件穿透，不影响点击下方元素 */
-            user-select: none;       /* 防止文字被选中 */
-            font-family: 'Segoe UI', 'Noto Sans', 'Microsoft YaHei', sans-serif;
-            text-shadow: 0 0 10px rgba(100, 200, 255, 0.2); /* 轻微发光，融入背景 */
-            letter-spacing: 2px;
-            transform: rotate(-5deg); /* 轻微倾斜，更自然 */
+            gap: 8px;
         }
-        /* 针对小屏幕调整字号或旋转 */
+        .prompt {
+            color: #00e5ff;
+            font-weight: bold;
+        }
+        #input-text {
+            flex: 1;
+            outline: none;
+            caret-color: transparent;
+        }
+        /* 光标闪烁 */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 18px;
+            background-color: #b0e6ff;
+            animation: blink 1s step-end infinite;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+        /* 隐藏输入框 */
+        #hidden-input {
+            position: absolute;
+            opacity: 0;
+            left: -9999px;
+            top: 0;
+        }
+        /* 故障文字效果 */
+        .glitch {
+            position: relative;
+        }
+        .glitch::before,
+        .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+        .glitch::before {
+            color: #ff00c8;
+            animation: glitch-1 2s infinite linear alternate-reverse;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        }
+        .glitch::after {
+            color: #00fff7;
+            animation: glitch-2 3s infinite linear alternate-reverse;
+            clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+        }
+        @keyframes glitch-1 {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-2px); }
+            40% { transform: translateX(2px); }
+            60% { transform: translateX(-1px); }
+            80% { transform: translateX(1px); }
+            100% { transform: translateX(0); }
+        }
+        @keyframes glitch-2 {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(2px); }
+            40% { transform: translateX(-2px); }
+            60% { transform: translateX(1px); }
+            80% { transform: translateX(-1px); }
+            100% { transform: translateX(0); }
+        }
+        /* 响应式适配 */
         @media (max-width: 600px) {
-            .background-text {
-                transform: rotate(-3deg);
-                font-size: 1rem;
+            #terminal {
+                padding: 20px 15px;
+                font-size: 14px;
+            }
+            .cursor {
+                height: 16px;
+                width: 8px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="background-text">
-        命に嫌われている。<br>
-        他人が生きていてもどうでもよくて、<br>
-        でも、やっぱり君には生きて欲しい<br>
-        そう、今これを読んでいる「君」に<br>
-        生きて、私のためにでも
+    <div id="terminal">
+        <div id="output"></div>
+        <div class="input-line">
+            <span class="prompt">&gt;&gt;&gt;</span>
+            <span id="input-text"></span>
+            <span class="cursor"></span>
+        </div>
     </div>
-    <div class="container floating">
-        <header>
-            <h1 onclick="showEgg3()">Contact Information</h1>
-            <div class="subtitle" onclick="showEgg2()">Feel free to reach out for communication</div>
-        </header>
-        <main>
-            <div class="contact-card">
-                <a href="mailto:Fuyu_Yume@outlook.com" class="email-link">
-                    Click here to Email me
-                </a>
-                <div class="links-section">
-                    <span class="section-title" onclick="showEgg4()">Other Platforms</span>
-                    <div class="social-links">
-                        <a href="https://space.bilibili.com/337793420" target="_blank" class="social-link">
-                            BiliBili
-                        </a>
-                        <a href="https://steamcommunity.com/id/WntSnwf" target="_blank" class="social-link">
-                            Steam
-                        </a>
-                        <a class="social-link" onclick="showSocialMedia()">
-                            SocialMedia
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer" onclick="showEgg1()">Designed for my VRChat friends.--@Wnt.Snwf.</div>
-            <!-- 替换原Original Bio/Translation，新增咖啡居世界链接 -->
-            <a href="https://wntsnwf.github.io/GoodnightCafe.github.io/" target="_blank" class="vrchat-badge">Goodnight Café</a>
-        </footer>
-    </div>
+    <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
     <script>
-        function showSocialMedia() {
-            alert("QQ: 2078029993 \n(This is an inactive account. I will tell you the active account when you are trusted.) \nWeChat: Secret \nYoutube: Null \nTwitter: Null \nGithub: WntSnwf");
+        const output = document.getElementById('output');
+        const inputText = document.getElementById('input-text');
+        const hiddenInput = document.getElementById('hidden-input');
+        const terminal = document.getElementById('terminal');
+
+        let commandHistory = [];
+        let historyIndex = -1;
+        let currentInput = '';
+
+        // 页面初始化
+        window.onload = () => {
+            hiddenInput.focus();
+            bootSystem();
+        };
+
+        // 点击终端聚焦输入
+        terminal.addEventListener('click', () => {
+            hiddenInput.focus();
+        });
+
+        // 同步输入内容
+        hiddenInput.addEventListener('input', () => {
+            currentInput = hiddenInput.value;
+            inputText.textContent = currentInput;
+        });
+
+        // 键盘事件处理
+        hiddenInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const command = currentInput.trim();
+                if (command) {
+                    commandHistory.push(command);
+                    historyIndex = commandHistory.length;
+                    printUserInput(command);
+                    executeCommand(command);
+                }
+                currentInput = '';
+                hiddenInput.value = '';
+                inputText.textContent = '';
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (historyIndex > 0) {
+                    historyIndex--;
+                    currentInput = commandHistory[historyIndex];
+                    hiddenInput.value = currentInput;
+                    inputText.textContent = currentInput;
+                }
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++;
+                    currentInput = commandHistory[historyIndex];
+                } else {
+                    historyIndex = commandHistory.length;
+                    currentInput = '';
+                }
+                hiddenInput.value = currentInput;
+                inputText.textContent = currentInput;
+            }
+        });
+
+        // 系统启动动画
+        function bootSystem() {
+            const bootLines = [
+                { text: '=== Anti-Utopia System v1.0 ===', class: 'highlight glitch', delay: 0 },
+                { text: 'Initializing core modules...', class: 'system-gray', delay: 500 },
+                { text: '[OK] Memory module loaded', class: 'success', delay: 300 },
+                { text: '[OK] User profile linked: Wnt. Snwf.', class: 'success', delay: 300 },
+                { text: '[WARN] Utopia module not found', class: 'error', delay: 400 },
+                { text: 'System ready.', class: 'system-cyan', delay: 500 },
+                { text: 'Type "help" to list all available commands.', class: 'system-gray', delay: 200 }
+            ];
+
+            let totalDelay = 0;
+            bootLines.forEach(line => {
+                totalDelay += line.delay;
+                setTimeout(() => {
+                    appendOutput(line.text, line.class);
+                    // 给故障元素添加data-text
+                    if (line.class.includes('glitch')) {
+                        const lastLine = output.lastElementChild;
+                        lastLine.setAttribute('data-text', line.text);
+                    }
+                    scrollToBottom();
+                }, totalDelay);
+            });
         }
-        function showEgg1(){
-            alert("Congratulations on finding the Egg! What a wonderful and special discovery — it's no small thing, and I hope it brings a smile to your face.\n\nYou know, everyone goes through difficult times. When things feel heavy, try to gently let go of what's weighing you down. Do something you truly enjoy — whether it's listening to music, hearing the sound of rain, or anything that brings you peace. Everything will be fine.\n\nRemember, be kind to yourself. Bright days are ahead.\n\nLove from China.")
+
+        // 打印用户输入
+        function printUserInput(text) {
+            const line = document.createElement('div');
+            line.className = 'output-line';
+            line.innerHTML = `<span class="prompt">&gt;&gt;&gt;</span> <span class="user-input">${escapeHtml(text)}</span>`;
+            output.appendChild(line);
+            scrollToBottom();
         }
-        function showEgg2(){
-            alert("This is an Easter Egg.\n\n---\n\nDon't feel sad over my death.\nJust as winter's crystal is fragile,\nthere's a time for every snowflake to melt.\nIf you can remember there has been a snowflake in your life,\nthat is enough.\n\n不必为我的逝去哀戚。\n若说冬日晶莹易碎，\n须知每片雪花终将消融。\n只要记得生命中曾有片雪花停留，\n便已足够。")
+
+        // 追加文本输出
+        function appendOutput(text, className = '') {
+            const line = document.createElement('div');
+            line.className = `output-line ${className}`;
+            line.textContent = text;
+            output.appendChild(line);
+            scrollToBottom();
         }
-        function showEgg3(){
-            alert("This is an Easter Egg.\n\n---\n\nYou know, no one in the world can completely understand you.\nNot your friends, not your parents, not even yourself.\nBut there must be someone willing to try to understand and accept you.\nIf you don't have that person yet, let me be that person.\nLet me understand you, accept you, save you —\nbecause that is exactly what no one has ever done for me.\n.\n.\n.\nAlthough I am the person who needs that most.")
+
+        // 追加HTML输出
+        function appendHtml(html, className = '') {
+            const line = document.createElement('div');
+            line.className = `output-line ${className}`;
+            line.innerHTML = html;
+            output.appendChild(line);
+            scrollToBottom();
         }
-        function showEgg4(){
-            alert("This is an Easter Egg.\n\n---\n\nLife is full of luck.\nHow far you rise,\n depends on how kindly it treats you.\nIt's ridiculous, but true.\nSo, since everything is already written into destiny, what's the meaning of living in a ridiculous world, doing ridiculous things that you may not wanna do, and ridiculously preventing people from dying?\n\nMaybe it's just because of that tiny, almost invisible hope.\n\n---\n\nReply to Kamitora's VRChat bio, and figure out why I want to prevent those whom I met and got along with from dying.")
+
+        // 滚动到底部
+        function scrollToBottom() {
+            terminal.scrollTop = terminal.scrollHeight;
+        }
+
+        // HTML转义
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 命令执行
+        function executeCommand(cmd) {
+            const command = cmd.toLowerCase();
+            
+            switch(command) {
+                case 'help':
+                    showHelp();
+                    break;
+                case 'bio':
+                    showBio();
+                    break;
+                case 'status':
+                    showStatus();
+                    break;
+                case 'groups':
+                    showGroups();
+                    break;
+                case 'contact':
+                    showContact();
+                    break;
+                case 'social':
+                    showSocial();
+                    break;
+                case 'utopia':
+                    showUtopia();
+                    break;
+                case 'clear':
+                    clearTerminal();
+                    break;
+                case 'bilibili':
+                    showBilibili();
+                    break;
+                case 'steam':
+                    showSteam();
+                    break;
+                case 'cafe':
+                    showCafe();
+                    break;
+                case 'egg1':
+                case 'kind':
+                    showEgg1();
+                    break;
+                case 'egg2':
+                case 'snow':
+                    showEgg2();
+                    break;
+                case 'egg3':
+                case 'understand':
+                    showEgg3();
+                    break;
+                case 'egg4':
+                case 'hope':
+                    showEgg4();
+                    break;
+                case 'the world is an anti-utopia.':
+                    showAdminWelcome();
+                    break;
+                default:
+                    appendOutput(`Command not found: ${cmd}`, 'error');
+                    appendOutput('Type "help" for available commands.', 'system-gray');
+            }
+        }
+
+        // 帮助命令
+        function showHelp() {
+            const helpContent = `Available Commands:
+  help        Show this help message
+  bio         Display user biography
+  status      Show online status & profile info
+  groups      List owned and joined groups
+  contact     Get contact email
+  bilibili    Open Bilibili profile
+  steam       Open Steam profile
+  social      Show extended social media details
+  cafe        Open Goodnight Café world
+  utopia      Access Utopia module
+  clear       Clear the terminal screen
+
+[Hint] There are hidden commands waiting to be discovered.`;
+            appendOutput(helpContent, 'system-cyan');
+        }
+
+        // 个人简介
+        function showBio() {
+            appendOutput('Loading user profile...', 'system-gray');
+            setTimeout(() => {
+                appendOutput('Success.', 'success');
+                setTimeout(() => {
+                    appendHtml(`<span class="prompt">&gt;&gt;&gt;</span> Load ISFP, INFP
+<span class="success">Success.</span>
+
+<span class="prompt">&gt;&gt;&gt;</span> Print bio
+I've waited for spring, I've waited for understanding, I've waited for someone to say "of course".
+But spring is always followed by winter, and understanding is always followed by misunderstanding.
+Then I found out: the world is an anti-Utopia.`);
+                }, 300);
+            }, 400);
+        }
+
+        // 状态信息
+        function showStatus() {
+            const status = `Username:   Wnt. Snwf.
+Status:     Online | 救赎...
+Pronoun:    Yuki / 小雪`;
+            appendOutput(status, 'highlight');
+        }
+
+        // 群组信息
+        function showGroups() {
+            const groups = `Owned Group:
+  - WntSnwf
+
+Joined Groups:
+  - ネメシス教団
+  - Lv.100 メンヘラ
+  - ...`;
+            appendOutput(groups);
+        }
+
+        // 联系方式
+        function showContact() {
+            const contact = `Email:  Fuyu_Yume@outlook.com`;
+            appendOutput(contact);
+        }
+
+        // Bilibili主页
+        function showBilibili() {
+            appendHtml('Bilibili Profile: <a href="https://space.bilibili.com/337793420" target="_blank">https://space.bilibili.com/337793420</a>');
+        }
+
+        // Steam主页
+        function showSteam() {
+            appendHtml('Steam Profile: <a href="https://steamcommunity.com/id/WntSnwf" target="_blank">https://steamcommunity.com/id/WntSnwf</a>');
+        }
+
+        // 社交媒体详情
+        function showSocial() {
+            const social = `QQ:         2078029993 (Inactive account. Active account granted upon trust.)
+WeChat:     Secret
+Youtube:    Null
+Twitter:    Null
+Github:     WntSnwf`;
+            appendOutput(social, 'system-gray');
+        }
+
+        // Utopia模块
+        function showUtopia() {
+            appendOutput('Accessing Utopia module...', 'system-gray');
+            setTimeout(() => {
+                const err1 = document.createElement('div');
+                err1.className = 'output-line error glitch';
+                err1.textContent = 'ERROR.CANNOTFIND.UTOPIA';
+                err1.setAttribute('data-text', 'ERROR.CANNOTFIND.UTOPIA');
+                output.appendChild(err1);
+                scrollToBottom();
+
+                setTimeout(() => {
+                    const err2 = document.createElement('div');
+                    err2.className = 'output-line error glitch';
+                    err2.textContent = 'ERROR.CANNOTFIND.LIFE';
+                    err2.setAttribute('data-text', 'ERROR.CANNOTFIND.LIFE');
+                    output.appendChild(err2);
+                    scrollToBottom();
+
+                    setTimeout(() => {
+                        appendOutput('Switching to Anti-Utopia System...', 'system-gray');
+                        setTimeout(() => {
+                            appendOutput('Anti-Utopia System is already running.', 'success');
+                        }, 500);
+                    }, 600);
+                }, 400);
+            }, 500);
+        }
+
+        // 清屏
+        function clearTerminal() {
+            output.innerHTML = '';
+        }
+
+        // 管理员欢迎效果
+        function showAdminWelcome() {
+            appendOutput('Verifying administrator identity...', 'system-gray');
+            setTimeout(() => {
+                appendOutput('[OK] Identity verification passed', 'success');
+                setTimeout(() => {
+                    appendOutput('Unlocking core system privileges...', 'system-gray');
+                    setTimeout(() => {
+                        appendHtml(`
+<span class="highlight">Welcome, administrator.</span>
+<span class="system-cyan">Admin ID: Nemesis & Yuki</span>
+<span class="system-gray">Anti-Utopia System root access granted.</span>`);
+                    }, 500);
+                }, 500);
+            }, 600);
+        }
+
+        // 彩蛋1
+        function showEgg1() {
+            const egg = `Congratulations on finding the hidden egg.
+
+Everyone goes through difficult times.
+When things feel heavy, try to gently let go of what's weighing you down.
+Do something you truly enjoy -- listen to music, hear the sound of rain, anything that brings you peace.
+Everything will be fine.
+
+Be kind to yourself. Bright days are ahead.
+
+Love from China.`;
+            appendOutput(egg, 'highlight');
+        }
+
+        // 彩蛋2
+        function showEgg2() {
+            const egg = `Don't feel sad over my death.
+Just as winter's crystal is fragile,
+there's a time for every snowflake to melt.
+If you can remember there has been a snowflake in your life,
+that is enough.
+
+不必为我的逝去哀戚。
+若说冬日晶莹易碎，
+须知每片雪花终将消融。
+只要记得生命中曾有片雪花停留过，
+便已足够。`;
+            appendOutput(egg);
+        }
+
+        // 彩蛋3
+        function showEgg3() {
+            const egg = `You know, no one in the world can completely understand you.
+Not your friends, not your parents, not even yourself.
+
+But there must be someone willing to try to understand and accept you.
+If you don't have that person yet, let me be that person.
+Let me understand you, accept you, save you --
+
+because that is exactly what no one has ever done for me.`;
+            appendOutput(egg);
+        }
+
+        // 彩蛋4
+        function showEgg4() {
+            const egg = `Life is full of luck.
+How far you rise, depends on how kindly it treats you.
+It's ridiculous, but true.
+
+So, since everything is already written into destiny,
+what's the meaning of living in a ridiculous world,
+doing ridiculous things that you may not wanna do,
+and ridiculously preventing people from dying?
+
+Maybe it's just because of that tiny, almost invisible hope.
+
+---
+Reply to Kamitora's VRChat bio,
+and figure out why I want to prevent those whom I met and got along with from dying.`;
+            appendOutput(egg);
+        }
+
+        // 咖啡屋链接
+        function showCafe() {
+            appendHtml('Goodnight Café: <a href="https://wntsnwf.github.io/GoodnightCafe.github.io/" target="_blank">https://wntsnwf.github.io/GoodnightCafe.github.io/</a>');
         }
     </script>
 </body>
