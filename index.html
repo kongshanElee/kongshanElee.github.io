@@ -363,6 +363,9 @@
                 case 'the world is an anti-utopia.':
                     showAdminWelcome();
                     break;
+                    case 'proof':
+                    showProof();
+                    break;
                 default:
                     appendOutput(`Command not found: ${cmd}`, 'error');
                     appendOutput('Type "help" for available commands.', 'system-gray');
@@ -563,6 +566,27 @@ Maybe it's just because of that tiny, almost invisible hope.
 Reply to Kamitora's VRChat bio,
 and figure out why I want to prevent those whom I met and got along with from dying.`;
             appendOutput(egg);
+        }
+
+        // 证明彩蛋
+        function showProof() {
+            const proof = `Proof that Redemption ⊆ Love
+We prove this by reductio ad absurdum from three angles — motive, process, and outcome.
+
+Motive: If redemption lacks love, it reduces to a selfish transaction (fear or reward-seeking), not genuine atonement.
+        True redemption values the other above self, which is the essence of love.
+Process: Without love, the suffering involved becomes either self-display or emotional coercion ("you owe me").
+         Love alone turns pain into willing sacrifice and prevents redemption from becoming secondary harm.
+Outcome: Without love, redemption ends in bondage — guilt or indebtedness—whereas love "bears all things, hopes all things"
+         and sets the redeemed truly free, restoring relationship.
+            
+Therefore, redemption is not a separate act; it is love operating under extreme conditions.
+Any "redemption" devoid of love is merely a moral or religious counterfeit.
+Hence every instance of redemption necessarily contains love, so redemption ⊆ love.
+In theological terms, redemption is love descending into history to bear the cost of brokenness.
+
+Q.E.D.`;
+            appendOutput(proof);
         }
 
         // 咖啡屋链接
