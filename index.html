@@ -366,6 +366,9 @@
                     case 'proof':
                     showProof();
                     break;
+                    case 'why':
+                    showReason();
+                    break;
                 default:
                     appendOutput(`Command not found: ${cmd}`, 'error');
                     appendOutput('Type "help" for available commands.', 'system-gray');
@@ -587,6 +590,14 @@ In theological terms, redemption is love descending into history to bear the cos
 
 Q.E.D.`;
             appendOutput(proof);
+        }
+
+        // 理由彩蛋
+        function showReason() {
+            appendOutput('Why I built this Anti-Utopia System and believe the world is an anti-Utopia?')
+            setTimeout(() => {
+                appendOutput('Because "the reality is always unwilling to give me the answer I want."', 'highlight');
+            }, 500);
         }
 
         // 咖啡屋链接
